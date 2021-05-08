@@ -8,46 +8,40 @@
     tools:context=".MainActivity2">
 
     <ImageView
-        android:id="@+id/imageView17"
-        android:layout_width="403dp"
-        android:layout_height="514dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/grouppp" />
-
-    <ImageView
         android:id="@+id/easy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="easy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.307"
         app:srcCompat="@drawable/gro" />
-
-    <ImageView
-        android:id="@+id/medium"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:onClick="medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/easy"
-        app:srcCompat="@drawable/group" />
 
     <ImageView
         android:id="@+id/hard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="44dp"
         android:onClick="hard"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/medium"
         app:srcCompat="@drawable/groupp" />
+
+    <ImageView
+        android:id="@+id/medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:onClick="medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/easy"
+        app:srcCompat="@drawable/group" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

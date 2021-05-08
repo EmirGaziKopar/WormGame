@@ -87,6 +87,7 @@ class MainActivity : AppCompatActivity() {
             override fun onFinish() {
                 val alert = AlertDialog.Builder(this@MainActivity)
                 handler.removeCallbacks(runnable)
+                mp.stop()
 
                 if (score <10){
                     Toast.makeText(this@MainActivity,"Did you play the game with a nose?",Toast.LENGTH_LONG).show()
@@ -139,8 +140,16 @@ class MainActivity : AppCompatActivity() {
         }.start()
     }
 
+    override fun onResume() {
+        super.onResume()
+        mp=MediaPlayer.create(this,R.raw.arkaplan)
+        mp.start()
+    }
+
 
     fun next(view :View){
+        handler.removeCallbacks(runnable)
+        mp.stop()
         var intent = Intent(applicationContext,MainActivity2::class.java)
         finish()
         startActivity(intent)
@@ -174,8 +183,8 @@ class MainActivity : AppCompatActivity() {
 
         runnable = object : Runnable {
             override fun run() {
-                mp=MediaPlayer.create(this@MainActivity,R.raw.kapi)
-                mp.start()
+                /*handler.removeCallbacks(runnable)
+                mp.stop()*/
                 //bunun içine yazılan herşey istediğimiz periyotta çalıştırılır
                 for (image in imageArray){
                     image.visibility = View.INVISIBLE
