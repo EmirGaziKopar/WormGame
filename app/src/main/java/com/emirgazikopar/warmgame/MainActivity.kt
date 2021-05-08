@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
 
 
         //CountDown Timer
-        object : CountDownTimer(15000,1000){
+        object : CountDownTimer(100000,1000){
             override fun onTick(millisUntilFinished: Long) {
                 timeView.text = "Left: ${millisUntilFinished/1000}"
 
@@ -118,7 +118,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 alert.setTitle("Game Over")
-                alert.setMessage("Do you want to play warm again ?")
+                alert.setMessage("Do you want to play worm again ?")
                 alert.setCancelable(false)
                 alert.setPositiveButton("yes") {dialog, which->
                     val intent = intent //normal şartlarda sayfalardan veri çekmek veya gideceğimiz aktiviteyi belirtip aktiviteler arası yolculuk için kullanırız ama bu şekilde kullanıldığında olduğu aktivititeye
